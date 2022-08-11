@@ -11,5 +11,6 @@ class ArrayViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationItem.largeTitleDisplayMode = .never
     }
 }
