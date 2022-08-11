@@ -24,7 +24,7 @@ class MainViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let destinationVC = segue.destination as? ArrayViewController
-        destinationVC?.title = "Array: \(Int.random(in: 0..<10_000))"
+        destinationVC?.title = "Array: \(Int.random(in: 0 ..< 10_000))"
     }
 }
 

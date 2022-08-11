@@ -17,6 +17,8 @@
 		020EC63228A4FCA7001382B3 /* ArrayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020EC63128A4FCA7001382B3 /* ArrayViewController.swift */; };
 		020EC63528A51714001382B3 /* OperationCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020EC63328A51714001382B3 /* OperationCollectionViewCell.swift */; };
 		020EC63628A51714001382B3 /* OperationCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 020EC63428A51714001382B3 /* OperationCollectionViewCell.xib */; };
+		020EC63828A5461D001382B3 /* ArrayProcessingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020EC63728A5461D001382B3 /* ArrayProcessingModel.swift */; };
+		020EC63A28A5498E001382B3 /* Operation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020EC63928A5498E001382B3 /* Operation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		020EC63128A4FCA7001382B3 /* ArrayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayViewController.swift; sourceTree = "<group>"; };
 		020EC63328A51714001382B3 /* OperationCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OperationCollectionViewCell.swift; sourceTree = "<group>"; };
 		020EC63428A51714001382B3 /* OperationCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OperationCollectionViewCell.xib; sourceTree = "<group>"; };
+		020EC63728A5461D001382B3 /* ArrayProcessingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayProcessingModel.swift; sourceTree = "<group>"; };
+		020EC63928A5498E001382B3 /* Operation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Operation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +82,8 @@
 		020EC62C28A429AA001382B3 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				020EC63728A5461D001382B3 /* ArrayProcessingModel.swift */,
+				020EC63928A5498E001382B3 /* Operation.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -177,9 +183,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				020EC63528A51714001382B3 /* OperationCollectionViewCell.swift in Sources */,
+				020EC63A28A5498E001382B3 /* Operation.swift in Sources */,
 				020EC61D28A42967001382B3 /* MainViewController.swift in Sources */,
 				020EC61928A42967001382B3 /* AppDelegate.swift in Sources */,
 				020EC63228A4FCA7001382B3 /* ArrayViewController.swift in Sources */,
+				020EC63828A5461D001382B3 /* ArrayProcessingModel.swift in Sources */,
 				020EC61B28A42967001382B3 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

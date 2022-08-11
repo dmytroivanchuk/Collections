@@ -10,7 +10,7 @@ import UIKit
 class OperationCollectionViewCell: UICollectionViewCell {
 
     @IBOutlet var operationDescriptionLabel: UILabel!
-    @IBOutlet var operationProccessingActivityIndicatorView: UIActivityIndicatorView!
+    @IBOutlet var operationInProcessActivityIndicatorView: UIActivityIndicatorView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
