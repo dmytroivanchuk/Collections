@@ -36,11 +36,10 @@ extension ArrayViewController: UICollectionViewDelegate {
                 return
             }
             arrayProcessingModel.generateArray {
-                collectionView.reloadItems(at: [indexPath])
-            } completion: {
                 collectionView.reloadData()
             }
-        
+            collectionView.reloadItems(at: [indexPath])
+            
         } else if indexPath.section == 1 {
             
             let operation = arrayProcessingModel.arrayOperations[indexPath.item]
@@ -50,9 +49,8 @@ extension ArrayViewController: UICollectionViewDelegate {
             
             arrayProcessingModel.executeOperation(operation) {
                 collectionView.reloadItems(at: [indexPath])
-            } completion: {
-                collectionView.reloadItems(at: [indexPath])
             }
+            collectionView.reloadItems(at: [indexPath])
         }
     }
 }
@@ -62,7 +60,7 @@ extension ArrayViewController: UICollectionViewDelegate {
 extension ArrayViewController: UICollectionViewDataSource {
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        arrayProcessingModel.array.isEmpty ? 1 : 2
+        arrayProcessingModel.arrayGenerationStatus == .idle || arrayProcessingModel.arrayGenerationStatus == .executing ? 1 : 2
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -73,6 +71,7 @@ extension ArrayViewController: UICollectionViewDataSource {
         let cell = arrayCollectionView.dequeueReusableCell(withReuseIdentifier: "OperationCollectionViewCell", for: indexPath) as! OperationCollectionViewCell
         
         if indexPath.section == 0 {
+            cell.operationDescriptionLabel.textAlignment = .center
             
             switch arrayProcessingModel.arrayGenerationStatus {
             case .idle:
@@ -80,23 +79,52 @@ extension ArrayViewController: UICollectionViewDataSource {
             case .executing:
                 cell.operationInProcessActivityIndicatorView.startAnimating()
             case let .finished(executionTime):
-                cell.operationDescriptionLabel.text = "Array generation time: \(String(format: "%.2f", executionTime))"
+                cell.operationDescriptionLabel.text = "Array generation time: \(String(format: "%.2f", executionTime)) s."
+                cell.operationView.backgroundColor = UIColor(named: "customLightGray")
+                collectionView.backgroundColor = .systemGray3
             }
         
         } else if indexPath.section == 1 {
+            cell.operationDescriptionLabel.textAlignment = .natural
             
             let operation = arrayProcessingModel.arrayOperations[indexPath.item]
-            
             switch operation.status {
             case .idle:
                 cell.operationDescriptionLabel.text = operation.description
             case .executing:
                 cell.operationInProcessActivityIndicatorView.startAnimating()
             case let .finished(executionTime):
-                cell.operationDescriptionLabel.text = "Execution time: \(String(format: "%.2f", executionTime))"
+                cell.operationDescriptionLabel.text = "Execution time: \(String(format: "%.2f", executionTime)) s."
+                cell.operationView.backgroundColor = UIColor(named: "customLightGray")
             }
         }
         
         return cell
+    }
+}
+
+//MARK: - UICollectionViewDelegateFlowLayout Methods
+
+extension ArrayViewController: UICollectionViewDelegateFlowLayout {
+
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        switch indexPath.section {
+            case 0:
+            return CGSize(width: collectionView.frame.width, height: 100)
+            default:
+            return CGSize(width: (collectionView.frame.width - 1) / 2, height: 100)
+        }
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        return UIEdgeInsets(top: 1, left: 0.0, bottom: 0, right: 0.0)
+    }
+
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        return CGFloat(1)
+    }
+
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return CGFloat(1)
     }
 }

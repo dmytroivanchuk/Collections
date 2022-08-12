@@ -85,9 +85,8 @@ class ArrayProcessingModel {
         })
     ]
 
-    func generateArray(initialization initializationHandler: () -> Void, completion completionHandler: @escaping () -> Void) {
+    func generateArray(completion completionHandler: @escaping () -> Void) {
         arrayGenerationStatus = .executing
-        initializationHandler()
         
         DispatchQueue.global(qos: .userInitiated).async {
             
@@ -103,9 +102,8 @@ class ArrayProcessingModel {
         }
     }
     
-    func executeOperation(_ operation: Operation, initialization initializationHandler: () -> Void, completion completionHandler: @escaping () -> Void) {
+    func executeOperation(_ operation: Operation, completion completionHandler: @escaping () -> Void) {
         operation.status = .executing
-        initializationHandler()
         
         DispatchQueue.global(qos: .userInitiated).async {
             let executionTime = self.measureExecutionTime {
