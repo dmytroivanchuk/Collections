@@ -32,7 +32,7 @@ extension ArrayViewController: UICollectionViewDelegate {
         
         if indexPath.section == 0 {
             
-            guard arrayProcessingModel.array.isEmpty else {
+            guard arrayProcessingModel.arrayGenerationStatus == .idle else {
                 return
             }
             arrayProcessingModel.generateArray {
