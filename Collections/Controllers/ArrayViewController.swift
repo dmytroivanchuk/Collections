@@ -92,6 +92,7 @@ extension ArrayViewController: UICollectionViewDataSource {
             case .idle:
                 cell.operationDescriptionLabel.text = operation.description
             case .executing:
+                cell.operationDescriptionLabel.text = ""
                 cell.operationInProcessActivityIndicatorView.startAnimating()
             case let .finished(executionTime):
                 cell.operationDescriptionLabel.text = "Execution time: \(String(format: "%.2f", executionTime)) s."
