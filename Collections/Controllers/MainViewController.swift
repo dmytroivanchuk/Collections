@@ -21,6 +21,11 @@ class MainViewController: UIViewController {
         menuTableView.delegate = self
         menuTableView.dataSource = self
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let destinationVC = segue.destination as? ArrayViewController
+        destinationVC?.title = "Array: \(Int.random(in: 0 ..< 10_000))"
+    }
 }
 
 //MARK: - UITableViewDelegate Methods
@@ -28,6 +33,13 @@ class MainViewController: UIViewController {
 extension MainViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        
+        switch indexPath.row {
+            case 0:
+                performSegue(withIdentifier: "mainToArrayScreenSegue", sender: self)
+            default:
+                break
+        }
     }
 }
 
