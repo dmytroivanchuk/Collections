@@ -25,6 +25,7 @@
 		02BBD02928AAB2CC0018D8FC /* SetScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 02BBD02828AAB2CC0018D8FC /* SetScreen.storyboard */; };
 		02BBD02B28AAB30E0018D8FC /* SetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02BBD02A28AAB30E0018D8FC /* SetViewController.swift */; };
 		02BBD02D28AAD65D0018D8FC /* SetProcessingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02BBD02C28AAD65D0018D8FC /* SetProcessingModel.swift */; };
+		02BBD02F28AAEC1F0018D8FC /* SetProcessingModelUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02BBD02E28AAEC1F0018D8FC /* SetProcessingModelUnitTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,7 @@
 		02BBD02828AAB2CC0018D8FC /* SetScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SetScreen.storyboard; sourceTree = "<group>"; };
 		02BBD02A28AAB30E0018D8FC /* SetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetViewController.swift; sourceTree = "<group>"; };
 		02BBD02C28AAD65D0018D8FC /* SetProcessingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetProcessingModel.swift; sourceTree = "<group>"; };
+		02BBD02E28AAEC1F0018D8FC /* SetProcessingModelUnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetProcessingModelUnitTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,6 +167,7 @@
 			isa = PBXGroup;
 			children = (
 				020EC64128A69237001382B3 /* ArrayProcessingModelUnitTests.swift */,
+				02BBD02E28AAEC1F0018D8FC /* SetProcessingModelUnitTests.swift */,
 			);
 			path = CollectionsUnitTests;
 			sourceTree = "<group>";
@@ -329,6 +332,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				020EC64228A69237001382B3 /* ArrayProcessingModelUnitTests.swift in Sources */,
+				02BBD02F28AAEC1F0018D8FC /* SetProcessingModelUnitTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
