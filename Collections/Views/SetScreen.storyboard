@@ -37,13 +37,13 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lxb-ab-flt">
-                                <rect key="frame" x="15" y="307.66666666666669" width="360" height="0.0"/>
+                                <rect key="frame" x="15" y="297.66666666666669" width="360" height="0.0"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Has-Ba-0oE">
-                                <rect key="frame" x="15" y="327.66666666666669" width="360" height="34.333333333333314"/>
+                                <rect key="frame" x="15" y="307.66666666666669" width="360" height="34.333333333333314"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="All characters that do not match">
                                     <fontDescription key="titleFontDescription" type="system" pointSize="17"/>
@@ -53,19 +53,19 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iYZ-gt-9kc">
-                                <rect key="frame" x="15" y="382" width="360" height="0.0"/>
+                                <rect key="frame" x="15" y="352" width="360" height="0.0"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O9N-Nn-a3V">
-                                <rect key="frame" x="15" y="475.33333333333331" width="360" height="0.0"/>
+                                <rect key="frame" x="15" y="425.33333333333331" width="360" height="0.0"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LaU-ff-le6">
-                                <rect key="frame" x="15" y="402" width="360" height="53.333333333333314"/>
+                                <rect key="frame" x="15" y="362" width="360" height="53.333333333333314"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain">
                                     <attributedString key="attributedTitle">
@@ -85,10 +85,10 @@
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="iYZ-gt-9kc" firstAttribute="top" secondItem="Has-Ba-0oE" secondAttribute="bottom" constant="20" id="0YJ-GT-mRV"/>
+                            <constraint firstItem="iYZ-gt-9kc" firstAttribute="top" secondItem="Has-Ba-0oE" secondAttribute="bottom" constant="10" id="0YJ-GT-mRV"/>
                             <constraint firstItem="13l-Q9-qfO" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="trailing" multiplier="15/390" id="0z1-fg-EGf"/>
                             <constraint firstItem="qkF-Gn-6iQ" firstAttribute="trailing" secondItem="13l-Q9-qfO" secondAttribute="trailing" id="4k8-IY-tWR"/>
-                            <constraint firstItem="O9N-Nn-a3V" firstAttribute="top" secondItem="LaU-ff-le6" secondAttribute="bottom" constant="20" id="9mQ-5x-rfc"/>
+                            <constraint firstItem="O9N-Nn-a3V" firstAttribute="top" secondItem="LaU-ff-le6" secondAttribute="bottom" constant="10" id="9mQ-5x-rfc"/>
                             <constraint firstItem="qkF-Gn-6iQ" firstAttribute="top" secondItem="u1a-mp-DPl" secondAttribute="bottom" constant="40" id="BK1-V1-0Xq"/>
                             <constraint firstItem="qkF-Gn-6iQ" firstAttribute="leading" secondItem="13l-Q9-qfO" secondAttribute="leading" id="Cge-6N-7Ww"/>
                             <constraint firstItem="lxb-ab-flt" firstAttribute="leading" secondItem="13l-Q9-qfO" secondAttribute="leading" id="EK6-pg-aWG"/>
@@ -100,14 +100,14 @@
                             <constraint firstItem="lxb-ab-flt" firstAttribute="trailing" secondItem="13l-Q9-qfO" secondAttribute="trailing" id="UAv-zK-Ihr"/>
                             <constraint firstItem="Has-Ba-0oE" firstAttribute="leading" secondItem="13l-Q9-qfO" secondAttribute="leading" id="WO9-Pw-b6W"/>
                             <constraint firstItem="u1a-mp-DPl" firstAttribute="trailing" secondItem="13l-Q9-qfO" secondAttribute="trailing" id="bRt-Tg-inG"/>
-                            <constraint firstItem="Has-Ba-0oE" firstAttribute="top" secondItem="lxb-ab-flt" secondAttribute="bottom" constant="20" id="fh8-YB-Hy8"/>
+                            <constraint firstItem="Has-Ba-0oE" firstAttribute="top" secondItem="lxb-ab-flt" secondAttribute="bottom" constant="10" id="fh8-YB-Hy8"/>
                             <constraint firstItem="u1a-mp-DPl" firstAttribute="leading" secondItem="13l-Q9-qfO" secondAttribute="leading" id="gp1-G3-Ee2"/>
                             <constraint firstItem="LaU-ff-le6" firstAttribute="trailing" secondItem="13l-Q9-qfO" secondAttribute="trailing" id="hAh-XW-pic"/>
                             <constraint firstItem="O9N-Nn-a3V" firstAttribute="trailing" secondItem="13l-Q9-qfO" secondAttribute="trailing" id="lqF-bZ-0kI"/>
-                            <constraint firstItem="LaU-ff-le6" firstAttribute="top" secondItem="iYZ-gt-9kc" secondAttribute="bottom" constant="20" id="n3Q-hm-Kc2"/>
+                            <constraint firstItem="LaU-ff-le6" firstAttribute="top" secondItem="iYZ-gt-9kc" secondAttribute="bottom" constant="10" id="n3Q-hm-Kc2"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="13l-Q9-qfO" secondAttribute="trailing" multiplier="390/375" id="pcE-pe-qqr"/>
                             <constraint firstItem="u1a-mp-DPl" firstAttribute="top" secondItem="13l-Q9-qfO" secondAttribute="bottom" constant="30" id="qz0-Zl-9Ug"/>
-                            <constraint firstItem="lxb-ab-flt" firstAttribute="top" secondItem="qkF-Gn-6iQ" secondAttribute="bottom" constant="20" id="vnJ-V8-O4F"/>
+                            <constraint firstItem="lxb-ab-flt" firstAttribute="top" secondItem="qkF-Gn-6iQ" secondAttribute="bottom" constant="10" id="vnJ-V8-O4F"/>
                             <constraint firstItem="O9N-Nn-a3V" firstAttribute="leading" secondItem="13l-Q9-qfO" secondAttribute="leading" id="yFE-HX-820"/>
                         </constraints>
                     </view>
