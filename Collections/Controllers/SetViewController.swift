@@ -23,6 +23,9 @@ class SetViewController: UIViewController {
         
         firstTextField.addTarget(self, action: #selector(textFieldDidChange(textField:)), for: UIControl.Event.editingChanged)
         secondTextField.addTarget(self, action: #selector(textFieldDidChange(textField:)), for: UIControl.Event.editingChanged)
+        
+        firstTextField.accessibilityIdentifier = "firstTextField"
+        secondTextField.accessibilityIdentifier = "secondTextField"
     }
     
     @IBAction func matchingCharatersButtonPressed(_ sender: UIButton) {

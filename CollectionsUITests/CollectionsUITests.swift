@@ -89,6 +89,29 @@ class CollectionsUITests: XCTestCase {
         XCTAssert(!staticText["Remove 1000 elements at the end of the array one-by-one."].exists)
         XCTAssert(!staticText["Remove 1000 elements at the end of the array at once."].exists)
     }
+    
+    func testSetFeature_withAllButtonsPressed_shouldExecuteAllOperations() throws {
+        let app = XCUIApplication()
+        app.launch()
+        
+        app.tables.staticTexts["Set"].tap()
+        
+        app.textFields["firstTextField"].tap()
+        app.textFields["firstTextField"].typeText("ab123")
+        
+        app.textFields["secondTextField"].tap()
+        app.textFields["secondTextField"].typeText("123ac")
+        
+        app.staticTexts["All matching letters"].tap()
+        app.staticTexts["All characters that do not match"].tap()
+        app.staticTexts["All unique characters from the first text field that do not match in text fields"].tap()
+        
+        app.staticTexts["a"].tap()
+        
+        XCTAssert(app.staticTexts["a"].exists)
+        XCTAssert(app.staticTexts["b"].exists || app.staticTexts["c"].exists)
+        XCTAssert(app.staticTexts["b"].exists)
+    }
 
     func testLaunchPerformance() throws {
         if #available(macOS 10.15, iOS 13.0, tvOS 13.0, watchOS 7.0, *) {
