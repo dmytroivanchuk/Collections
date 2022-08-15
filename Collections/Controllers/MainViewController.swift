@@ -37,6 +37,11 @@ extension MainViewController: UITableViewDelegate {
         switch indexPath.row {
             case 0:
                 performSegue(withIdentifier: "mainToArrayScreenSegue", sender: self)
+            case 1:
+            let storyboard = UIStoryboard(name: "SetScreen", bundle: nil)
+            let setViewController = (storyboard.instantiateViewController(withIdentifier: "SetViewController") as! SetViewController)
+            setViewController.title = "Set: \(Int.random(in: 0 ..< 10_000))"
+            navigationController?.pushViewController(setViewController, animated: true)
             default:
                 break
         }

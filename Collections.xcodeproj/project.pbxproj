@@ -24,6 +24,7 @@
 		020EC65128A6B2E0001382B3 /* CollectionsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020EC65028A6B2E0001382B3 /* CollectionsUITestsLaunchTests.swift */; };
 		02BBD02928AAB2CC0018D8FC /* SetScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 02BBD02828AAB2CC0018D8FC /* SetScreen.storyboard */; };
 		02BBD02B28AAB30E0018D8FC /* SetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02BBD02A28AAB30E0018D8FC /* SetViewController.swift */; };
+		02BBD02D28AAD65D0018D8FC /* SetProcessingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02BBD02C28AAD65D0018D8FC /* SetProcessingModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +66,7 @@
 		020EC65028A6B2E0001382B3 /* CollectionsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionsUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		02BBD02828AAB2CC0018D8FC /* SetScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SetScreen.storyboard; sourceTree = "<group>"; };
 		02BBD02A28AAB30E0018D8FC /* SetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetViewController.swift; sourceTree = "<group>"; };
+		02BBD02C28AAD65D0018D8FC /* SetProcessingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetProcessingModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +132,7 @@
 			isa = PBXGroup;
 			children = (
 				020EC63728A5461D001382B3 /* ArrayProcessingModel.swift */,
+				02BBD02C28AAD65D0018D8FC /* SetProcessingModel.swift */,
 				020EC63928A5498E001382B3 /* Operation.swift */,
 			);
 			path = Models;
@@ -313,6 +316,7 @@
 				020EC63A28A5498E001382B3 /* Operation.swift in Sources */,
 				020EC61D28A42967001382B3 /* MainViewController.swift in Sources */,
 				020EC61928A42967001382B3 /* AppDelegate.swift in Sources */,
+				02BBD02D28AAD65D0018D8FC /* SetProcessingModel.swift in Sources */,
 				020EC63228A4FCA7001382B3 /* ArrayViewController.swift in Sources */,
 				02BBD02B28AAB30E0018D8FC /* SetViewController.swift in Sources */,
 				020EC63828A5461D001382B3 /* ArrayProcessingModel.swift in Sources */,
