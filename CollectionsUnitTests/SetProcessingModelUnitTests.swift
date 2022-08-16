@@ -21,27 +21,22 @@ class SetProcessingModelUnitTests: XCTestCase {
     }
 
     func test_executeOperation_withMatchingCharactersIdentifier_shouldReturnMatchingCharacters() throws {
-        let result = setProcessingModel.executeOperation(withIdentifier: "matchingCharacters", "Qwerty", "Qazr")
+        let result = setProcessingModel.executeOperation(withIdentifier: OperationIdentifier.matchingCharacters, "Qwerty", "Qazr")
         XCTAssertEqual(CharacterSet(charactersIn: result), CharacterSet(charactersIn: "Qr"))
     }
     
     func test_executeOperation_withNonMatchingCharactersIdentifier_shouldReturnNonMatchingCharacters() throws {
-        let result = setProcessingModel.executeOperation(withIdentifier: "nonMatchingCharacters", "Qwerty", "Qazr")
+        let result = setProcessingModel.executeOperation(withIdentifier: OperationIdentifier.nonMatchingCharacters, "Qwerty", "Qazr")
         XCTAssertEqual(CharacterSet(charactersIn: result), CharacterSet(charactersIn: "tzweay"))
     }
     
     func test_executeOperation_withUniqueCharactersIdentifier_shouldReturnUniqueCharacters() throws {
-        let result = setProcessingModel.executeOperation(withIdentifier: "uniqueCharacters", "Qwerty", "Qazr")
+        let result = setProcessingModel.executeOperation(withIdentifier: OperationIdentifier.uniqueCharacters, "Qwerty", "Qazr")
         XCTAssertEqual(CharacterSet(charactersIn: result), CharacterSet(charactersIn: "ytew"))
     }
     
-    func test_executeOperation_withInvalidIdentifier_shouldReturnNothing() throws {
-        let result = setProcessingModel.executeOperation(withIdentifier: "atchingCharacters", "Qwerty", "Qazr")
-        XCTAssertEqual(result, "")
-    }
-    
     func test_executeOperation_withNilInput_shouldReturnNothing() throws {
-        let result = setProcessingModel.executeOperation(withIdentifier: "matchingCharacters", nil, nil)
+        let result = setProcessingModel.executeOperation(withIdentifier: OperationIdentifier.matchingCharacters, nil, nil)
         XCTAssertEqual(result, "")
     }
 }

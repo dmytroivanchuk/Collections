@@ -29,13 +29,13 @@ class SetViewController: UIViewController {
     }
     
     @IBAction func matchingCharatersButtonPressed(_ sender: UIButton) {
-        matchingCharactersLabel.text = setProcessingModel.executeOperation(withIdentifier: "matchingCharacters", firstTextField.text, secondTextField.text)
+        matchingCharactersLabel.text = setProcessingModel.executeOperation(withIdentifier: OperationIdentifier.matchingCharacters, firstTextField.text, secondTextField.text)
     }
     @IBAction func nonMatchingCharactersButtonPressed(_ sender: UIButton) {
-        nonMatchingCharactersLabel.text = setProcessingModel.executeOperation(withIdentifier: "nonMatchingCharacters", firstTextField.text, secondTextField.text)
+        nonMatchingCharactersLabel.text = setProcessingModel.executeOperation(withIdentifier: OperationIdentifier.nonMatchingCharacters, firstTextField.text, secondTextField.text)
     }
     @IBAction func uniqueCharactersButtonPressed(_ sender: UIButton) {
-        uniqueCharactersLabel.text = setProcessingModel.executeOperation(withIdentifier: "uniqueCharacters", firstTextField.text, secondTextField.text)
+        uniqueCharactersLabel.text = setProcessingModel.executeOperation(withIdentifier: OperationIdentifier.uniqueCharacters, firstTextField.text, secondTextField.text)
     }
     
     //MARK: - UITextField Methods
