@@ -23,8 +23,20 @@ class MainViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let destinationVC = segue.destination as? ArrayViewController
-        destinationVC?.title = "Array: \(Int.random(in: 0 ..< 10_000))"
+        let destinationVC = segue.destination as? SetViewController
+        destinationVC?.title = "Set: \(Int.random(in: 0 ..< 10_000))"
+    }
+    
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+        let senderCell = sender as! UITableViewCell
+        if identifier == "mainToArrayScreenSegue" {
+            if senderCell.contentConfiguration.debugDescription.contains("Array") {
+                return true
+            } else {
+                return false
+            }
+        }
+        return true
     }
 }
 
@@ -35,15 +47,15 @@ extension MainViewController: UITableViewDelegate {
         tableView.deselectRow(at: indexPath, animated: true)
         
         switch indexPath.row {
-            case 0:
-                performSegue(withIdentifier: "mainToArrayScreenSegue", sender: self)
-            case 1:
-            let storyboard = UIStoryboard(name: "SetScreen", bundle: nil)
-            let setViewController = (storyboard.instantiateViewController(withIdentifier: "SetViewController") as! SetViewController)
-            setViewController.title = "Set: \(Int.random(in: 0 ..< 10_000))"
-            navigationController?.pushViewController(setViewController, animated: true)
-            default:
-                break
+        case 1:
+            performSegue(withIdentifier: "mainToSetScreenSegue", sender: self)
+        case 2:
+            let storyboard = UIStoryboard(name: "DictionaryScreen", bundle: nil)
+            let dictionaryViewController = (storyboard.instantiateViewController(withIdentifier: "DictionaryViewController") as! DictionaryViewController)
+            dictionaryViewController.title = "Dictionary: \(Int.random(in: 0 ..< 10_000))"
+            navigationController?.pushViewController(dictionaryViewController, animated: true)
+        default:
+            break
         }
     }
 }

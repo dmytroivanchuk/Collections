@@ -26,6 +26,8 @@
 		02BBD02B28AAB30E0018D8FC /* SetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02BBD02A28AAB30E0018D8FC /* SetViewController.swift */; };
 		02BBD02D28AAD65D0018D8FC /* SetProcessingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02BBD02C28AAD65D0018D8FC /* SetProcessingModel.swift */; };
 		02BBD02F28AAEC1F0018D8FC /* SetProcessingModelUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02BBD02E28AAEC1F0018D8FC /* SetProcessingModelUnitTests.swift */; };
+		02BBD03128AE571C0018D8FC /* DictionaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02BBD03028AE571C0018D8FC /* DictionaryViewController.swift */; };
+		02BBD03328AE57770018D8FC /* DictionaryScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 02BBD03228AE57770018D8FC /* DictionaryScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +71,8 @@
 		02BBD02A28AAB30E0018D8FC /* SetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetViewController.swift; sourceTree = "<group>"; };
 		02BBD02C28AAD65D0018D8FC /* SetProcessingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetProcessingModel.swift; sourceTree = "<group>"; };
 		02BBD02E28AAEC1F0018D8FC /* SetProcessingModelUnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetProcessingModelUnitTests.swift; sourceTree = "<group>"; };
+		02BBD03028AE571C0018D8FC /* DictionaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryViewController.swift; sourceTree = "<group>"; };
+		02BBD03228AE57770018D8FC /* DictionaryScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DictionaryScreen.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,6 +151,7 @@
 				020EC61E28A42967001382B3 /* Main.storyboard */,
 				020EC62F28A4FC3A001382B3 /* ArrayScreen.storyboard */,
 				02BBD02828AAB2CC0018D8FC /* SetScreen.storyboard */,
+				02BBD03228AE57770018D8FC /* DictionaryScreen.storyboard */,
 				020EC63328A51714001382B3 /* OperationCollectionViewCell.swift */,
 				020EC63428A51714001382B3 /* OperationCollectionViewCell.xib */,
 			);
@@ -159,6 +164,7 @@
 				020EC61C28A42967001382B3 /* MainViewController.swift */,
 				020EC63128A4FCA7001382B3 /* ArrayViewController.swift */,
 				02BBD02A28AAB30E0018D8FC /* SetViewController.swift */,
+				02BBD03028AE571C0018D8FC /* DictionaryViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -288,6 +294,7 @@
 				020EC63028A4FC3A001382B3 /* ArrayScreen.storyboard in Resources */,
 				020EC63628A51714001382B3 /* OperationCollectionViewCell.xib in Resources */,
 				020EC62528A42967001382B3 /* LaunchScreen.storyboard in Resources */,
+				02BBD03328AE57770018D8FC /* DictionaryScreen.storyboard in Resources */,
 				020EC62228A42967001382B3 /* Assets.xcassets in Resources */,
 				020EC62028A42967001382B3 /* Main.storyboard in Resources */,
 				02BBD02928AAB2CC0018D8FC /* SetScreen.storyboard in Resources */,
@@ -315,6 +322,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				02BBD03128AE571C0018D8FC /* DictionaryViewController.swift in Sources */,
 				020EC63528A51714001382B3 /* OperationCollectionViewCell.swift in Sources */,
 				020EC63A28A5498E001382B3 /* Operation.swift in Sources */,
 				020EC61D28A42967001382B3 /* MainViewController.swift in Sources */,
