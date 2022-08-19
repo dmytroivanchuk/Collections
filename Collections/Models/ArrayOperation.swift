@@ -1,14 +1,14 @@
 //
-//  Operation.swift
+//  ArrayOperation.swift
 //  Collections
 //
 //  Created by Dmytro Ivanchuk on 11.08.2022.
 //
 
-class Operation {
+class ArrayOperation {
     let description: String
     let closureToExecute: ([Int]) -> Void
-    var status = OperationStatus.idle
+    var status = ArrayOperationStatus.idle
     
     init(description: String, closureToExecute: @escaping ([Int]) -> Void) {
         self.description = description

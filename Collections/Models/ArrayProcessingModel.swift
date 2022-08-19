@@ -9,77 +9,77 @@ import Foundation
 
 class ArrayProcessingModel {
     var array: [Int] = []
-    var arrayGenerationStatus = OperationStatus.idle
+    var arrayGenerationStatus = ArrayOperationStatus.idle
     let arrayOperations = [
         
-        Operation(description: "Insert 1000 elements at the beginning of the array one-by-one.", closureToExecute: {
+        ArrayOperation(description: "Insert 1000 elements at the beginning of the array one-by-one.", closureToExecute: {
             var newArray = $0
             for int in 0 ..< 1000 {
                 newArray.insert(int, at: 0)
             }
         }),
         
-        Operation(description: "Insert 1000 elements at the beginning of the array at once.", closureToExecute: {
+        ArrayOperation(description: "Insert 1000 elements at the beginning of the array at once.", closureToExecute: {
             var newArray = $0
             newArray.insert(contentsOf: 0 ..< 1000, at: 0)
         }),
         
-        Operation(description: "Insert 1000 elements in the middle of the array one-by-one.", closureToExecute: {
+        ArrayOperation(description: "Insert 1000 elements in the middle of the array one-by-one.", closureToExecute: {
             var newArray = $0
             for int in 0 ..< 1000 {
                 newArray.insert(int, at: newArray.count / 2)
             }
         }),
         
-        Operation(description: "Insert 1000 elements in the middle of the array at once.", closureToExecute: {
+        ArrayOperation(description: "Insert 1000 elements in the middle of the array at once.", closureToExecute: {
             var newArray = $0
             newArray.insert(contentsOf: 0 ..< 1000, at: newArray.count / 2)
         }),
         
-        Operation(description: "Insert 1000 elements at the end of the array one-by-one.", closureToExecute: {
+        ArrayOperation(description: "Insert 1000 elements at the end of the array one-by-one.", closureToExecute: {
             var newArray = $0
             for int in 0 ..< 1000 {
                 newArray.append(int)
             }
         }),
         
-        Operation(description: "Insert 1000 elements at the end of the array at once.", closureToExecute: {
+        ArrayOperation(description: "Insert 1000 elements at the end of the array at once.", closureToExecute: {
             var newArray = $0
             newArray.append(contentsOf: 0 ..< 1000)
         }),
         
-        Operation(description: "Remove 1000 elements at the beginning of the array one-by-one.", closureToExecute: {
+        ArrayOperation(description: "Remove 1000 elements at the beginning of the array one-by-one.", closureToExecute: {
             var newArray = $0
             for _ in 0 ..< 1000 {
                 newArray.remove(at: 0)
             }
         }),
         
-        Operation(description: "Remove 1000 elements at the beginning of the array at once.", closureToExecute: {
+        ArrayOperation(description: "Remove 1000 elements at the beginning of the array at once.", closureToExecute: {
             var newArray = $0
             newArray.removeSubrange(0 ..< 1000)
         }),
         
-        Operation(description: "Remove 1000 elements in the middle of the array one-by-one.", closureToExecute: {
+        ArrayOperation(description: "Remove 1000 elements in the middle of the array one-by-one.", closureToExecute: {
             var newArray = $0
             for _ in 0 ..< 1000 {
                 newArray.remove(at: newArray.count / 2)
             }
         }),
         
-        Operation(description: "Remove 1000 elements in the middle of the array at once.", closureToExecute: {
+        ArrayOperation(description: "Remove 1000 elements in the middle of the array at once.", closureToExecute: {
             var newArray = $0
             newArray.removeSubrange(newArray.count / 2 ..< newArray.count / 2 + 1000)
         }),
         
-        Operation(description: "Remove 1000 elements at the end of the array one-by-one.", closureToExecute: {
+        ArrayOperation(description: "Remove 1000 elements at the end of the array one-by-one.", closureToExecute: {
             var newArray = $0
             for _ in 0 ..< 1000 {
                 newArray.removeLast()
             }
         }),
         
-        Operation(description: "Remove 1000 elements at the end of the array at once.", closureToExecute: {
+        ArrayOperation(description: "Remove 1000 elements at the end of the array at once.", closureToExecute: {
             var newArray = $0
             newArray.removeSubrange(newArray.count - 1000 ..< newArray.count)
         })
@@ -102,7 +102,7 @@ class ArrayProcessingModel {
         }
     }
     
-    func executeOperation(_ operation: Operation, completion completionHandler: @escaping () -> Void) {
+    func executeOperation(_ operation: ArrayOperation, completion completionHandler: @escaping () -> Void) {
         operation.status = .executing
         
         DispatchQueue.global(qos: .userInitiated).async {
@@ -125,7 +125,7 @@ class ArrayProcessingModel {
     }
 }
 
-enum OperationStatus: Equatable {
+enum ArrayOperationStatus: Equatable {
     case idle
     case executing
     case finished(executionTime: Double)

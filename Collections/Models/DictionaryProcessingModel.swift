@@ -10,36 +10,36 @@ import Foundation
 class DictionaryProcessingModel {
     var array: [(String, String)] = []
     var dictionary: [String: String] = [:]
-    var dictionaryArrayGenerationStatus = DictionaryArrayOperationStatus.idle
-    var dictionaryArrayOperations: [DictionaryArrayOperation] = [
+    var dictionaryGenerationStatus = DictionaryOperationStatus.idle
+    var dictionaryOperations: [DictionaryOperation] = [
         
-        DictionaryArrayOperation(description: "Find the first contact", closureToExecute: { array, _ in
-            return array.first { $0.0 == "Name0" }?.1
+        DictionaryOperation(description: "Find the first contact", closureToExecute: { array, _ in
+            array.first { $0.0 == "Name0" }?.1
         }),
         
-        DictionaryArrayOperation(description: "Find the first contact", closureToExecute: { _, dictionary in
-            return dictionary["Name0"]
+        DictionaryOperation(description: "Find the first contact", closureToExecute: { _, dictionary in
+            dictionary["Name0"]
         }),
         
-        DictionaryArrayOperation(description: "Find the last contact", closureToExecute: { array, _ in
-            return array.first { $0.0 == "Name9999999" }?.1
+        DictionaryOperation(description: "Find the last contact", closureToExecute: { array, _ in
+            array.first { $0.0 == "Name9999999" }?.1
         }),
         
-        DictionaryArrayOperation(description: "Find the last contact", closureToExecute: { _, dictionary in
-            return dictionary["Name9999999"]
+        DictionaryOperation(description: "Find the last contact", closureToExecute: { _, dictionary in
+            dictionary["Name9999999"]
         }),
         
-        DictionaryArrayOperation(description: "Find the non-existing element", closureToExecute: { array, _ in
-            return array.first { $0.0 == "NameQwerty" }?.1
+        DictionaryOperation(description: "Find the non-existing element", closureToExecute: { array, _ in
+            array.first { $0.0 == "NameQwerty" }?.1
         }),
         
-        DictionaryArrayOperation(description: "Find the non-existing element", closureToExecute: { _, dictionary in
-            return dictionary["NameQwerty"]
+        DictionaryOperation(description: "Find the non-existing element", closureToExecute: { _, dictionary in
+            dictionary["NameQwerty"]
         })
     ]
 
     func generateDictionaryArray(completionHandler: @escaping () -> Void) {
-        dictionaryArrayGenerationStatus = .executing
+        dictionaryGenerationStatus = .executing
         
         DispatchQueue.global(qos: .userInitiated).async {
             
@@ -50,13 +50,13 @@ class DictionaryProcessingModel {
                 }
             }
             DispatchQueue.main.async {
-                self.dictionaryArrayGenerationStatus = .finished(executionTime: dictionaryArrayGenerationTime, resultNumber: "None")
+                self.dictionaryGenerationStatus = .finished(executionTime: dictionaryArrayGenerationTime, resultNumber: "None")
                 completionHandler()
             }
         }
     }
     
-    func executeOperation(_ operation: DictionaryArrayOperation, completion completionHandler: @escaping () -> Void) {
+    func executeOperation(_ operation: DictionaryOperation, completion completionHandler: @escaping () -> Void) {
         operation.status = .executing
         
         DispatchQueue.global(qos: .userInitiated).async {
@@ -79,16 +79,15 @@ class DictionaryProcessingModel {
     }
     
     func measureExecutionTimeAndSearchNumber(_ closureToExecute: () -> String?) -> (Double, String?) {
-        
         let startExecutionTime = CFAbsoluteTimeGetCurrent()
-        let searchedNumber = closureToExecute()
+        let resultNumber = closureToExecute()
         let finishExecutionTime = CFAbsoluteTimeGetCurrent()
 
-        return (finishExecutionTime - startExecutionTime, searchedNumber)
+        return (finishExecutionTime - startExecutionTime, resultNumber)
     }
 }
 
-enum DictionaryArrayOperationStatus {
+enum DictionaryOperationStatus: Equatable {
     case idle
     case executing
     case finished(executionTime: Double, resultNumber: String)
