@@ -23,8 +23,14 @@ class MainViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let destinationVC = segue.destination as? SetViewController
-        destinationVC?.title = "Set: \(Int.random(in: 0 ..< 10_000))"
+        if segue.identifier == "mainToArrayScreenSegue" {
+            let destinationVC = segue.destination as? ArrayViewController
+            destinationVC?.title = "Array: \(Int.random(in: 0 ..< 10_000))"
+        
+        } else if segue.identifier == "mainToSetScreenSegue" {
+            let destinationVC = segue.destination as? SetViewController
+            destinationVC?.title = "Set: \(Int.random(in: 0 ..< 10_000))"
+        }
     }
     
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
