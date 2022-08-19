@@ -9,6 +9,9 @@ import UIKit
 
 class DictionaryViewController: UIViewController {
 
+    @IBOutlet var dictionaryCollectionView: UICollectionView!
+    @IBOutlet var operationInProcessActivityIndicatorView: UIActivityIndicatorView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.largeTitleDisplayMode = .never

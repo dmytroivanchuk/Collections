@@ -28,6 +28,8 @@
 		02BBD02F28AAEC1F0018D8FC /* SetProcessingModelUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02BBD02E28AAEC1F0018D8FC /* SetProcessingModelUnitTests.swift */; };
 		02BBD03128AE571C0018D8FC /* DictionaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02BBD03028AE571C0018D8FC /* DictionaryViewController.swift */; };
 		02BBD03328AE57770018D8FC /* DictionaryScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 02BBD03228AE57770018D8FC /* DictionaryScreen.storyboard */; };
+		02BBD03528AF99D40018D8FC /* DictionaryProcessingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02BBD03428AF99D40018D8FC /* DictionaryProcessingModel.swift */; };
+		02BBD03728AF9BEB0018D8FC /* DictionaryArrayOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02BBD03628AF9BEB0018D8FC /* DictionaryArrayOperation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +75,8 @@
 		02BBD02E28AAEC1F0018D8FC /* SetProcessingModelUnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetProcessingModelUnitTests.swift; sourceTree = "<group>"; };
 		02BBD03028AE571C0018D8FC /* DictionaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryViewController.swift; sourceTree = "<group>"; };
 		02BBD03228AE57770018D8FC /* DictionaryScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DictionaryScreen.storyboard; sourceTree = "<group>"; };
+		02BBD03428AF99D40018D8FC /* DictionaryProcessingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryProcessingModel.swift; sourceTree = "<group>"; };
+		02BBD03628AF9BEB0018D8FC /* DictionaryArrayOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryArrayOperation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,7 +143,9 @@
 			children = (
 				020EC63728A5461D001382B3 /* ArrayProcessingModel.swift */,
 				02BBD02C28AAD65D0018D8FC /* SetProcessingModel.swift */,
+				02BBD03428AF99D40018D8FC /* DictionaryProcessingModel.swift */,
 				020EC63928A5498E001382B3 /* Operation.swift */,
+				02BBD03628AF9BEB0018D8FC /* DictionaryArrayOperation.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -325,6 +331,8 @@
 				02BBD03128AE571C0018D8FC /* DictionaryViewController.swift in Sources */,
 				020EC63528A51714001382B3 /* OperationCollectionViewCell.swift in Sources */,
 				020EC63A28A5498E001382B3 /* Operation.swift in Sources */,
+				02BBD03728AF9BEB0018D8FC /* DictionaryArrayOperation.swift in Sources */,
+				02BBD03528AF99D40018D8FC /* DictionaryProcessingModel.swift in Sources */,
 				020EC61D28A42967001382B3 /* MainViewController.swift in Sources */,
 				020EC61928A42967001382B3 /* AppDelegate.swift in Sources */,
 				02BBD02D28AAD65D0018D8FC /* SetProcessingModel.swift in Sources */,
