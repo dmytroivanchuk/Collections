@@ -30,6 +30,7 @@
 		02BBD03328AE57770018D8FC /* DictionaryScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 02BBD03228AE57770018D8FC /* DictionaryScreen.storyboard */; };
 		02BBD03528AF99D40018D8FC /* DictionaryProcessingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02BBD03428AF99D40018D8FC /* DictionaryProcessingModel.swift */; };
 		02BBD03728AF9BEB0018D8FC /* DictionaryOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02BBD03628AF9BEB0018D8FC /* DictionaryOperation.swift */; };
+		02BBD03928B003790018D8FC /* DictionaryProcessingModelUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02BBD03828B003790018D8FC /* DictionaryProcessingModelUnitTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +78,7 @@
 		02BBD03228AE57770018D8FC /* DictionaryScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DictionaryScreen.storyboard; sourceTree = "<group>"; };
 		02BBD03428AF99D40018D8FC /* DictionaryProcessingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryProcessingModel.swift; sourceTree = "<group>"; };
 		02BBD03628AF9BEB0018D8FC /* DictionaryOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryOperation.swift; sourceTree = "<group>"; };
+		02BBD03828B003790018D8FC /* DictionaryProcessingModelUnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryProcessingModelUnitTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,9 +144,9 @@
 			isa = PBXGroup;
 			children = (
 				020EC63728A5461D001382B3 /* ArrayProcessingModel.swift */,
+				020EC63928A5498E001382B3 /* ArrayOperation.swift */,
 				02BBD02C28AAD65D0018D8FC /* SetProcessingModel.swift */,
 				02BBD03428AF99D40018D8FC /* DictionaryProcessingModel.swift */,
-				020EC63928A5498E001382B3 /* ArrayOperation.swift */,
 				02BBD03628AF9BEB0018D8FC /* DictionaryOperation.swift */,
 			);
 			path = Models;
@@ -180,6 +182,7 @@
 			children = (
 				020EC64128A69237001382B3 /* ArrayProcessingModelUnitTests.swift */,
 				02BBD02E28AAEC1F0018D8FC /* SetProcessingModelUnitTests.swift */,
+				02BBD03828B003790018D8FC /* DictionaryProcessingModelUnitTests.swift */,
 			);
 			path = CollectionsUnitTests;
 			sourceTree = "<group>";
@@ -349,6 +352,7 @@
 			files = (
 				020EC64228A69237001382B3 /* ArrayProcessingModelUnitTests.swift in Sources */,
 				02BBD02F28AAEC1F0018D8FC /* SetProcessingModelUnitTests.swift in Sources */,
+				02BBD03928B003790018D8FC /* DictionaryProcessingModelUnitTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

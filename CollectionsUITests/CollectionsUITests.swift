@@ -54,27 +54,16 @@ class CollectionsUITests: XCTestCase {
         XCTAssert(element.exists)
         
         staticText["Insert 1000 elements at the beginning of the array at once."].tap()
-        sleep(3)
         staticText["Insert 1000 elements in the middle of the array one-by-one."].tap()
-        sleep(3)
         staticText["Insert 1000 elements in the middle of the array at once."].tap()
-        sleep(3)
         staticText["Insert 1000 elements at the end of the array one-by-one."].tap()
-        sleep(3)
         staticText["Insert 1000 elements at the end of the array at once."].tap()
-        sleep(3)
         staticText["Remove 1000 elements at the beginning of the array one-by-one."].tap()
-        sleep(3)
         staticText["Remove 1000 elements at the beginning of the array at once."].tap()
-        sleep(3)
         staticText["Remove 1000 elements in the middle of the array one-by-one."].tap()
-        sleep(3)
         staticText["Remove 1000 elements in the middle of the array at once."].tap()
-        sleep(3)
         staticText["Remove 1000 elements at the end of the array one-by-one."].tap()
-        sleep(3)
         staticText["Remove 1000 elements at the end of the array at once."].tap()
-        sleep(3)
         
         XCTAssert(!staticText["Insert 1000 elements at the beginning of the array one-by-one."].exists)
         XCTAssert(!staticText["Insert 1000 elements at the beginning of the array at once."].exists)
@@ -111,6 +100,37 @@ class CollectionsUITests: XCTestCase {
         XCTAssert(app.staticTexts["a"].exists)
         XCTAssert(app.staticTexts["b"].exists || app.staticTexts["c"].exists)
         XCTAssert(app.staticTexts["b"].exists)
+    }
+    
+    func testDictionaryFeature_withAllOperationCellPressed_shouldExecuteAllOperations() throws {
+        let app = XCUIApplication()
+        app.launch()
+        
+        app.tables.staticTexts["Dictionary"].tap()
+        sleep(10)
+        
+        let staticText = app.collectionViews.staticTexts
+        XCTAssert(staticText["Find the first contact"].exists)
+        XCTAssert(staticText["Find the last contact"].exists)
+        XCTAssert(staticText["Find the non-existing element"].exists)
+        
+        app.collectionViews.children(matching: .cell).element(boundBy: 2).staticTexts["Find the first contact"].tap()
+        
+        let predicate = NSPredicate(format: "label CONTAINS 'Result number: 0'")
+        let element = app.staticTexts.element(matching: predicate)
+        XCTAssert(element.exists)
+        element.tap()
+        XCTAssert(element.exists)
+        
+        staticText["Find the first contact"].tap()
+        app.collectionViews.children(matching: .cell).element(boundBy: 4).staticTexts["Find the last contact"].tap()
+        staticText["Find the last contact"].tap()
+        app.collectionViews.children(matching: .cell).element(boundBy: 6).staticTexts["Find the non-existing element"].tap()
+        staticText["Find the non-existing element"].tap()
+        
+        XCTAssert(!staticText["Find the first contact"].exists)
+        XCTAssert(!staticText["Find the last contact"].exists)
+        XCTAssert(!staticText["Find the non-existing element"].exists)
     }
 
     func testLaunchPerformance() throws {
