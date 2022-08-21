@@ -10,6 +10,7 @@ import UIKit
 class ArrayViewController: UIViewController {
 
     @IBOutlet var arrayCollectionView: UICollectionView!
+    @IBOutlet var arrayCollectionViewHeightConstraint: NSLayoutConstraint!
     
     let arrayProcessingModel = ArrayProcessingModel()
     
@@ -37,6 +38,8 @@ extension ArrayViewController: UICollectionViewDelegate {
             }
             arrayProcessingModel.generateArray {
                 collectionView.reloadData()
+                self.arrayCollectionViewHeightConstraint.constant = self.arrayCollectionView.collectionViewLayout.collectionViewContentSize.height
+                self.view.layoutIfNeeded()
             }
             collectionView.reloadItems(at: [indexPath])
             
@@ -118,14 +121,14 @@ extension ArrayViewController: UICollectionViewDelegateFlowLayout {
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        return UIEdgeInsets(top: 1, left: 0.0, bottom: 0, right: 0.0)
+        section == 0 ? UIEdgeInsets(top: 1, left: 0, bottom: 0, right: 0) : UIEdgeInsets(top: 1, left: 0, bottom: 1, right: 0)
     }
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-        return CGFloat(1)
+        CGFloat(1)
     }
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return CGFloat(1)
+        CGFloat(1)
     }
 }

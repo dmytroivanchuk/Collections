@@ -18,7 +18,7 @@
 		020EC63528A51714001382B3 /* OperationCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020EC63328A51714001382B3 /* OperationCollectionViewCell.swift */; };
 		020EC63628A51714001382B3 /* OperationCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 020EC63428A51714001382B3 /* OperationCollectionViewCell.xib */; };
 		020EC63828A5461D001382B3 /* ArrayProcessingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020EC63728A5461D001382B3 /* ArrayProcessingModel.swift */; };
-		020EC63A28A5498E001382B3 /* Operation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020EC63928A5498E001382B3 /* Operation.swift */; };
+		020EC63A28A5498E001382B3 /* ArrayOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020EC63928A5498E001382B3 /* ArrayOperation.swift */; };
 		020EC64228A69237001382B3 /* ArrayProcessingModelUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020EC64128A69237001382B3 /* ArrayProcessingModelUnitTests.swift */; };
 		020EC64F28A6B2E0001382B3 /* CollectionsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020EC64E28A6B2E0001382B3 /* CollectionsUITests.swift */; };
 		020EC65128A6B2E0001382B3 /* CollectionsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020EC65028A6B2E0001382B3 /* CollectionsUITestsLaunchTests.swift */; };
@@ -26,6 +26,11 @@
 		02BBD02B28AAB30E0018D8FC /* SetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02BBD02A28AAB30E0018D8FC /* SetViewController.swift */; };
 		02BBD02D28AAD65D0018D8FC /* SetProcessingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02BBD02C28AAD65D0018D8FC /* SetProcessingModel.swift */; };
 		02BBD02F28AAEC1F0018D8FC /* SetProcessingModelUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02BBD02E28AAEC1F0018D8FC /* SetProcessingModelUnitTests.swift */; };
+		02BBD03128AE571C0018D8FC /* DictionaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02BBD03028AE571C0018D8FC /* DictionaryViewController.swift */; };
+		02BBD03328AE57770018D8FC /* DictionaryScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 02BBD03228AE57770018D8FC /* DictionaryScreen.storyboard */; };
+		02BBD03528AF99D40018D8FC /* DictionaryProcessingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02BBD03428AF99D40018D8FC /* DictionaryProcessingModel.swift */; };
+		02BBD03728AF9BEB0018D8FC /* DictionaryOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02BBD03628AF9BEB0018D8FC /* DictionaryOperation.swift */; };
+		02BBD03928B003790018D8FC /* DictionaryProcessingModelUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02BBD03828B003790018D8FC /* DictionaryProcessingModelUnitTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,7 +64,7 @@
 		020EC63328A51714001382B3 /* OperationCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OperationCollectionViewCell.swift; sourceTree = "<group>"; };
 		020EC63428A51714001382B3 /* OperationCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OperationCollectionViewCell.xib; sourceTree = "<group>"; };
 		020EC63728A5461D001382B3 /* ArrayProcessingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayProcessingModel.swift; sourceTree = "<group>"; };
-		020EC63928A5498E001382B3 /* Operation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Operation.swift; sourceTree = "<group>"; };
+		020EC63928A5498E001382B3 /* ArrayOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayOperation.swift; sourceTree = "<group>"; };
 		020EC63F28A69237001382B3 /* CollectionsUnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CollectionsUnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		020EC64128A69237001382B3 /* ArrayProcessingModelUnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayProcessingModelUnitTests.swift; sourceTree = "<group>"; };
 		020EC64C28A6B2E0001382B3 /* CollectionsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CollectionsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -69,6 +74,11 @@
 		02BBD02A28AAB30E0018D8FC /* SetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetViewController.swift; sourceTree = "<group>"; };
 		02BBD02C28AAD65D0018D8FC /* SetProcessingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetProcessingModel.swift; sourceTree = "<group>"; };
 		02BBD02E28AAEC1F0018D8FC /* SetProcessingModelUnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetProcessingModelUnitTests.swift; sourceTree = "<group>"; };
+		02BBD03028AE571C0018D8FC /* DictionaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryViewController.swift; sourceTree = "<group>"; };
+		02BBD03228AE57770018D8FC /* DictionaryScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DictionaryScreen.storyboard; sourceTree = "<group>"; };
+		02BBD03428AF99D40018D8FC /* DictionaryProcessingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryProcessingModel.swift; sourceTree = "<group>"; };
+		02BBD03628AF9BEB0018D8FC /* DictionaryOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryOperation.swift; sourceTree = "<group>"; };
+		02BBD03828B003790018D8FC /* DictionaryProcessingModelUnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryProcessingModelUnitTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,8 +144,10 @@
 			isa = PBXGroup;
 			children = (
 				020EC63728A5461D001382B3 /* ArrayProcessingModel.swift */,
+				020EC63928A5498E001382B3 /* ArrayOperation.swift */,
 				02BBD02C28AAD65D0018D8FC /* SetProcessingModel.swift */,
-				020EC63928A5498E001382B3 /* Operation.swift */,
+				02BBD03428AF99D40018D8FC /* DictionaryProcessingModel.swift */,
+				02BBD03628AF9BEB0018D8FC /* DictionaryOperation.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -147,6 +159,7 @@
 				020EC61E28A42967001382B3 /* Main.storyboard */,
 				020EC62F28A4FC3A001382B3 /* ArrayScreen.storyboard */,
 				02BBD02828AAB2CC0018D8FC /* SetScreen.storyboard */,
+				02BBD03228AE57770018D8FC /* DictionaryScreen.storyboard */,
 				020EC63328A51714001382B3 /* OperationCollectionViewCell.swift */,
 				020EC63428A51714001382B3 /* OperationCollectionViewCell.xib */,
 			);
@@ -159,6 +172,7 @@
 				020EC61C28A42967001382B3 /* MainViewController.swift */,
 				020EC63128A4FCA7001382B3 /* ArrayViewController.swift */,
 				02BBD02A28AAB30E0018D8FC /* SetViewController.swift */,
+				02BBD03028AE571C0018D8FC /* DictionaryViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -168,6 +182,7 @@
 			children = (
 				020EC64128A69237001382B3 /* ArrayProcessingModelUnitTests.swift */,
 				02BBD02E28AAEC1F0018D8FC /* SetProcessingModelUnitTests.swift */,
+				02BBD03828B003790018D8FC /* DictionaryProcessingModelUnitTests.swift */,
 			);
 			path = CollectionsUnitTests;
 			sourceTree = "<group>";
@@ -288,6 +303,7 @@
 				020EC63028A4FC3A001382B3 /* ArrayScreen.storyboard in Resources */,
 				020EC63628A51714001382B3 /* OperationCollectionViewCell.xib in Resources */,
 				020EC62528A42967001382B3 /* LaunchScreen.storyboard in Resources */,
+				02BBD03328AE57770018D8FC /* DictionaryScreen.storyboard in Resources */,
 				020EC62228A42967001382B3 /* Assets.xcassets in Resources */,
 				020EC62028A42967001382B3 /* Main.storyboard in Resources */,
 				02BBD02928AAB2CC0018D8FC /* SetScreen.storyboard in Resources */,
@@ -315,8 +331,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				02BBD03128AE571C0018D8FC /* DictionaryViewController.swift in Sources */,
 				020EC63528A51714001382B3 /* OperationCollectionViewCell.swift in Sources */,
-				020EC63A28A5498E001382B3 /* Operation.swift in Sources */,
+				020EC63A28A5498E001382B3 /* ArrayOperation.swift in Sources */,
+				02BBD03728AF9BEB0018D8FC /* DictionaryOperation.swift in Sources */,
+				02BBD03528AF99D40018D8FC /* DictionaryProcessingModel.swift in Sources */,
 				020EC61D28A42967001382B3 /* MainViewController.swift in Sources */,
 				020EC61928A42967001382B3 /* AppDelegate.swift in Sources */,
 				02BBD02D28AAD65D0018D8FC /* SetProcessingModel.swift in Sources */,
@@ -333,6 +352,7 @@
 			files = (
 				020EC64228A69237001382B3 /* ArrayProcessingModelUnitTests.swift in Sources */,
 				02BBD02F28AAEC1F0018D8FC /* SetProcessingModelUnitTests.swift in Sources */,
+				02BBD03928B003790018D8FC /* DictionaryProcessingModelUnitTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

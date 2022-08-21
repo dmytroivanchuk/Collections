@@ -29,8 +29,8 @@ class ArrayProcessingModelUnitTests: XCTestCase {
         }
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
-            XCTAssertNotEqual(self.arrayProcessingModel.arrayGenerationStatus, OperationStatus.idle)
-            XCTAssertNotEqual(self.arrayProcessingModel.arrayGenerationStatus, OperationStatus.executing)
+            XCTAssertNotEqual(self.arrayProcessingModel.arrayGenerationStatus, ArrayOperationStatus.idle)
+            XCTAssertNotEqual(self.arrayProcessingModel.arrayGenerationStatus, ArrayOperationStatus.executing)
             XCTAssertEqual(self.arrayProcessingModel.array.count, 10_000_000)
             XCTAssert(testCompletionHandlerExecution)
             
@@ -44,7 +44,7 @@ class ArrayProcessingModelUnitTests: XCTestCase {
         let expectation = XCTestExpectation(description: "Execute operation on background thread")
         var testCompletionHandlerExecution = false
         
-        let testOperation = Operation(description: "Insert 500 elements at the end of the array one-by-one.", closureToExecute: {
+        let testOperation = ArrayOperation(description: "Insert 500 elements at the end of the array one-by-one.", closureToExecute: {
             var newArray = $0
             for int in 0 ..< 500 {
                 newArray.append(int)
@@ -56,8 +56,8 @@ class ArrayProcessingModelUnitTests: XCTestCase {
         }
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
-            XCTAssertNotEqual(testOperation.status, OperationStatus.idle)
-            XCTAssertNotEqual(testOperation.status, OperationStatus.executing)
+            XCTAssertNotEqual(testOperation.status, ArrayOperationStatus.idle)
+            XCTAssertNotEqual(testOperation.status, ArrayOperationStatus.executing)
             XCTAssert(testCompletionHandlerExecution)
             
             expectation.fulfill()

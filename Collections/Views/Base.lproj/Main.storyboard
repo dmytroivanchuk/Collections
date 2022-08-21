@@ -27,6 +27,9 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="EpI-KW-Kxo" kind="show" identifier="mainToArrayScreenSegue" id="emA-Ui-cr1"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -43,7 +46,7 @@
                     <navigationItem key="navigationItem" id="nc1-sR-4WY"/>
                     <connections>
                         <outlet property="menuTableView" destination="NvN-XV-cTv" id="C4u-f6-ZZk"/>
-                        <segue destination="EpI-KW-Kxo" kind="show" identifier="mainToArrayScreenSegue" id="DaL-nK-l3M"/>
+                        <segue destination="jqU-Wg-Dpq" kind="show" identifier="mainToSetScreenSegue" id="a4D-xl-lCy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -58,7 +61,17 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pl1-vN-A24" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1240" y="-104"/>
+            <point key="canvasLocation" x="1258" y="7"/>
+        </scene>
+        <!--SetViewController-->
+        <scene sceneID="Jhn-a6-FCS">
+            <objects>
+                <viewControllerPlaceholder storyboardName="SetScreen" referencedIdentifier="SetViewController" id="jqU-Wg-Dpq" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="NZx-v4-RWB"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="V2z-8u-zFt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1249" y="84"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="hWk-ZL-fci">
