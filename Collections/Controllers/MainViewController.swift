@@ -34,15 +34,7 @@ class MainViewController: UIViewController {
     }
     
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
-        let senderCell = sender as! UITableViewCell
-        if identifier == "mainToArrayScreenSegue" {
-            if senderCell.contentConfiguration.debugDescription.contains("Array") {
-                return true
-            } else {
-                return false
-            }
-        }
-        return true
+        (sender as! UITableViewCell) == menuTableView.cellForRow(at: IndexPath(row: 0, section: 0)) ? true : false
     }
 }
 
