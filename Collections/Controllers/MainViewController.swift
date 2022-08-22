@@ -21,6 +21,21 @@ class MainViewController: UIViewController {
         menuTableView.delegate = self
         menuTableView.dataSource = self
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "mainToArrayScreenSegue" {
+            let destinationVC = segue.destination as? ArrayViewController
+            destinationVC?.title = "Array: \(Int.random(in: 0 ..< 10_000))"
+        
+        } else if segue.identifier == "mainToSetScreenSegue" {
+            let destinationVC = segue.destination as? SetViewController
+            destinationVC?.title = "Set: \(Int.random(in: 0 ..< 10_000))"
+        }
+    }
+    
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+        (sender as! UITableViewCell) == menuTableView.cellForRow(at: IndexPath(row: 0, section: 0)) ? true : false
+    }
 }
 
 //MARK: - UITableViewDelegate Methods
@@ -28,6 +43,18 @@ class MainViewController: UIViewController {
 extension MainViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        
+        switch indexPath.row {
+        case 1:
+            performSegue(withIdentifier: "mainToSetScreenSegue", sender: self)
+        case 2:
+            let storyboard = UIStoryboard(name: "DictionaryScreen", bundle: nil)
+            let dictionaryViewController = (storyboard.instantiateViewController(withIdentifier: "DictionaryViewController") as! DictionaryViewController)
+            dictionaryViewController.title = "Dictionary: \(Int.random(in: 0 ..< 10_000))"
+            navigationController?.pushViewController(dictionaryViewController, animated: true)
+        default:
+            break
+        }
     }
 }
 
